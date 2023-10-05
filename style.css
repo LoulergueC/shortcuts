@@ -1,0 +1,106 @@
+:root {
+    --grey: rgb(232, 232, 232);
+    --bg: rgb(255, 255, 255);
+    --text: rgb(17, 24, 28);
+    --text-secondary: rgb(104, 112, 118);
+}
+
+body {
+    margin: 10vw;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--text-secondary);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Yeseva One", cursive;
+    color: var(--text);
+}
+h1 {
+    animation: h1anim 1.5s forwards;
+    word-spacing: 20px;
+    text-align: center;
+}
+@keyframes h1anim {
+    to {
+        letter-spacing: 5px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5vh 10vw;
+}
+
+.shortcut {
+    display: flex;
+    flex-direction: column;
+}
+
+.keys-content {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    font-weight: 400;
+    margin: 0;
+    margin-top: 10px;
+    letter-spacing: 0;
+    text-align: center;
+    cursor: pointer;
+    order: 2;
+}
+.keys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    order: 0;
+}
+.keys span {
+    font-size: larger;
+    font-weight: 200;
+}
+.key {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    background-color: var(--bg);
+    box-shadow: 0 3px var(--grey);
+    border: 1px solid var(--grey);
+}
+.key.hoverClass,
+.title:hover ~ .keys .key {
+    color: var(--text);
+    background-color: var(--grey);
+    transform: translateY(3px);
+    box-shadow: 0 0 var(--grey);
+}
+
+.example > * {
+    resize: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--grey);
+    background-color: var(--bg);
+    color: var(--text-secondary);
+    height: 26px;
+    width: calc(100% - 12px);
+    margin-bottom: 5px;
+    display: block;
+    font-size: 11px;
+}
+.example {
+    opacity: 0.5;
+}
+.shortcut:hover .example,
+.shortcut:focus-within .example {
+    opacity: 1;
+}

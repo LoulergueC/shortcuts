@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Les raccourcis clavier</title>
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Yeseva+One&display=swap"
+            rel="stylesheet" />
+
+        <!-- personal style -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Les raccourcis clavier</h1>
+        <div class="container">
+            <div class="shortcut">
+                <div class="example">
+                    <textarea>Copie moi !</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Copier</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="C">C</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <textarea>Coupe moi !</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Couper</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="X">X</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <input placeholder="Colle moi !" />
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Coller</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="V">V</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <input value="Supprime moi et annule l'action" />
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Annuler</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="Z">Z</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <input value="Ctrl + Z puis Ctrl + Y" />
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Rétablir</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="Y">Y</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <textarea>Sélectionne tout à l'intérieur de moi !</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Tout sélectionner</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="A">A</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Imprime moi !</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Imprimer</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="P">P</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Recherche moi</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Rechercher</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="F">F</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <script src="keyDetect.js"></script>
+    </body>
+</html>
