@@ -16,8 +16,23 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Les raccourcis clavier</h1>
-        <div class="container">
+        <div class="hero">
+            <h1>Les raccourcis clavier</h1>
+            <p>
+                Essayer chaque raccourci en temps réel grâce aux encadrés
+                disponibles au dessus du raccourci ou en direct depuis
+                l'ordinateur
+            </p>
+            <p>
+                Chaque raccourci est rangé dans une catégorie disponible ici :
+            </p>
+        </div>
+        <div class="nav">
+            <a href="#text">Manipulation du texte</a>
+        </div>
+        <div class="container" id="text">
+            <h2>La manipulation du texte</h2>
+
             <div class="shortcut">
                 <div class="example">
                     <textarea>Copie moi !</textarea>
@@ -62,6 +77,67 @@
 
             <div class="shortcut">
                 <div class="example">
+                    <textarea>Sélectionne tout à l'intérieur de moi !</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Tout sélectionner</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="A">A</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <textarea>Navigue entre les mots</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Naviguer entre mots entiers</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="LEFT">&leftarrow;</div>
+                        <div class="key" data-key="RIGHT">&rightarrow;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <textarea>Sélectionne chaque mot 1 par 1 !</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Sélectionner mots entiers</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="SHIFT">Shift</div>
+                        <span>+</span>
+                        <div class="key" data-key="LEFT">&leftarrow;</div>
+                        <div class="key" data-key="RIGHT">&rightarrow;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <textarea>Supprime chaque mot 1 par 1 !</textarea>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Supprimer mots entiers</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="BACK_SPACE">Suppr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="shortcut">
+                <div class="example">
                     <input value="Supprime moi et annule l'action" />
                 </div>
                 <div class="keys-content">
@@ -90,20 +166,6 @@
 
             <div class="shortcut">
                 <div class="example">
-                    <textarea>Sélectionne tout à l'intérieur de moi !</textarea>
-                </div>
-                <div class="keys-content">
-                    <h2 class="title">Tout sélectionner</h2>
-                    <div class="keys">
-                        <div class="key" data-key="CONTROL">Ctrl</div>
-                        <span>+</span>
-                        <div class="key" data-key="A">A</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="shortcut">
-                <div class="example">
                     <p>Imprime moi !</p>
                 </div>
                 <div class="keys-content">
@@ -126,6 +188,95 @@
                         <div class="key" data-key="CONTROL">Ctrl</div>
                         <span>+</span>
                         <div class="key" data-key="F">F</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="window">
+            <h2>La gestion des fenêtres</h2>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Ouvre une nouvelle fenêtre !</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Nouvelle fenêtre</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="N">N</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Navigue entre les fenêtres</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Navigation entre fenêtres</h2>
+                    <div class="keys">
+                        <div class="key" data-key="ALT">Alt</div>
+                        <span>+</span>
+                        <div class="key" data-key="TAB">Tab</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Ouvre un nouvel onglet !</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Nouvel onglet</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="T">T</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Navigue jusqu'au prochain onglet !</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Navigation entre onglets</h2>
+                    <div class="keys">
+                        <div class="key" data-key="ALT">Alt</div>
+                        <span>+</span>
+                        <div class="key" data-key="TAB">Tab</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Essaye ne pas me fermer...</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Fermer l'onglet</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="W">W</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shortcut">
+                <div class="example">
+                    <p>Essaye ne pas me fermer...</p>
+                </div>
+                <div class="keys-content">
+                    <h2 class="title">Rétablir le dernier onglet</h2>
+                    <div class="keys">
+                        <div class="key" data-key="CONTROL">Ctrl</div>
+                        <span>+</span>
+                        <div class="key" data-key="SHIFT">Shift</div>
+                        <span>+</span>
+                        <div class="key" data-key="T">T</div>
                     </div>
                 </div>
             </div>

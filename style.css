@@ -3,12 +3,17 @@
     --bg: rgb(255, 255, 255);
     --text: rgb(17, 24, 28);
     --text-secondary: rgb(104, 112, 118);
+    --accent: rgb(126, 235, 118);
 }
 
 body {
-    margin: 10vw;
     font-family: "Josefin Sans", sans-serif;
     color: var(--text-secondary);
+    min-height: 200vh;
+    /* background-image: url(/img/bg.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 h1,
 h2,
@@ -30,11 +35,30 @@ h1 {
     }
 }
 
+.hero {
+    padding: 5vh 10vw 0 10vw;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5vh 10vw;
+    padding: 10vh 10vw;
+}
+
+.container > h2 {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    padding: 20px 0;
+    z-index: 999;
 }
 
 .shortcut {
@@ -93,6 +117,7 @@ h1 {
     color: var(--text-secondary);
     height: 26px;
     width: calc(100% - 12px);
+    margin: 0;
     margin-bottom: 5px;
     display: block;
     font-size: 11px;
