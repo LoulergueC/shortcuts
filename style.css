@@ -1,16 +1,17 @@
 :root {
     --grey: rgb(232, 232, 232);
     --bg: rgb(255, 255, 255);
+    --bg-alpha: rgba(255, 255, 255, 0.2);
     --text: rgb(17, 24, 28);
     --text-secondary: rgb(104, 112, 118);
-    --accent: rgb(126, 235, 118);
+    --accent: rgb(112, 217, 101);
 }
 
 body {
     font-family: "Josefin Sans", sans-serif;
     color: var(--text-secondary);
     min-height: 200vh;
-    /* background-image: url(/img/bg.jpg); */
+    background-color: var(--bg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
@@ -40,8 +41,23 @@ h1 {
 }
 
 .nav {
-    position: sticky;
     top: 0;
+    padding: 20px 10vw;
+    font-weight: 200;
+    column-gap: 20px;
+    font-size: 15px;
+    line-height: 15px;
+    z-index: 9999 !important;
+    text-align: center;
+}
+.nav,
+.container > h2 {
+    display: flex;
+    position: sticky;
+    background: radial-gradient(var(--bg-alpha), var(--bg));
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    margin: 0;
 }
 
 .container {
@@ -49,16 +65,14 @@ h1 {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 5vh 10vw;
-    padding: 10vh 10vw;
+    padding: 5vh 10vw;
 }
 
 .container > h2 {
     width: 100%;
-    position: sticky;
-    top: 0;
-    background-color: var(--bg);
+    top: 55px;
     padding: 20px 0;
-    z-index: 999;
+    margin-top: 0;
 }
 
 .shortcut {
@@ -78,6 +92,7 @@ h1 {
     text-align: center;
     cursor: pointer;
     order: 2;
+    padding-bottom: 10px;
 }
 .keys {
     display: flex;
@@ -97,15 +112,15 @@ h1 {
     position: relative;
     z-index: 2;
     background-color: var(--bg);
-    box-shadow: 0 3px var(--grey);
-    border: 1px solid var(--grey);
+    box-shadow: 0 3px var(--accent);
+    border: 1px solid var(--accent);
 }
 .key.hoverClass,
 .title:hover ~ .keys .key {
-    color: var(--text);
-    background-color: var(--grey);
+    color: var(--bg);
+    background-color: var(--accent);
     transform: translateY(3px);
-    box-shadow: 0 0 var(--grey);
+    box-shadow: 0 0 var(--accent);
 }
 
 .example > * {
