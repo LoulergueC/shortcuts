@@ -1,0 +1,256 @@
+{
+    "Manipulation_du_texte": {
+        "0": {
+            "Title": "Copier",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "C"
+            },
+            "Example": {
+                "Type": "Textarea",
+                "Content": "Copie moi !"
+            }
+        },
+        "1": {
+            "Title": "Couper",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "X"
+            },
+            "Example": {
+                "Type": "Textarea",
+                "Content": "Coupe moi !"
+            }
+        },
+        "2": {
+            "Title": "Coller",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "V"
+            },
+            "Example": {
+                "Type": "Input",
+                "Content": "Colle moi !"
+            }
+        },
+        "3": {
+            "Title": "Tout_sélectionner",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "A"
+            },
+            "Example": {
+                "Type": "Textarea",
+                "Content": "Sélectionne tout à l'intérieur de moi !"
+            }
+        },
+        "4": {
+            "Title": "Naviguer_entre_mots_entiers",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Left / Right"
+            },
+            "Example": {
+                "Type": "Textarea",
+                "Content": "Navigue entre les mots"
+            }
+        },
+        "5": {
+            "Title": "Sélectionner_mots_entiers",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Shift",
+                "2": "Left / Right"
+            },
+            "Example": {
+                "Type": "Textarea",
+                "Content": "Sélectionne chaque mot 1 par 1 !"
+            }
+        },
+        "6": {
+            "Title": "Supprimer_mots_entiers",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Suppr"
+            },
+            "Example": {
+                "Type": "Textarea",
+                "Content": "Sélectionne chaque mot 1 par 1 !"
+            }
+        }
+    },
+    "Raccourcis_génériques": {
+        "0": {
+            "Title": "Annuler",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Z"
+            },
+            "Example": {
+                "Type": "Input",
+                "Content": "Supprime moi et annule l'action"
+            }
+        },
+        "1": {
+            "Title": "Rétablir",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Y"
+            },
+            "Example": {
+                "Type": "Input",
+                "Content": "Ctrl + Z pui Ctrl + Y"
+            }
+        },
+        "2": {
+            "Title": "Imprimer",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "P"
+            },
+            "Example": {
+                "Type": "Input",
+                "Content": "Imprime moi !"
+            }
+        },
+        "3": {
+            "Title": "Rechercher",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "F"
+            },
+            "Example": {
+                "Type": "Input",
+                "Content": "Recherche moi !"
+            }
+        }
+    },
+    "Spécifique_à_word": {
+        "0": {
+            "Title": "Texte_gras",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "B"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Essaye dans word !"
+            }
+        },
+        "1": {
+            "Title": "Texte_italique",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "I"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Essaye dans word !"
+            }
+        },
+        "2": {
+            "Title": "Texte_souligné",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "U"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Essaye dans word !"
+            }
+        },
+        "3": {
+            "Title": "Copier_mise_en_forme",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Shift",
+                "2": "C"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Essaye dans word !"
+            }
+        },
+        "4": {
+            "Title": "Coller_mise_en_forme",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Shift",
+                "2": "V"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Essaye dans word !"
+            }
+        }
+    },
+    "Gestion_des_fenêtres": {
+        "0": {
+            "Title": "Nouvelle_fenêtre",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "N"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Ouvre une nouvelle fenêtre !"
+            }
+        },
+        "1": {
+            "Title": "Fermer_fenêtre",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "F4"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Attention aux doigts"
+            }
+        },
+        "2": {
+            "Title": "Naviguer_entre_fenêtres",
+            "Keys": {
+                "0": "Alt",
+                "1": "Tab"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Navigue entre les fenêtres"
+            }
+        },
+        "3": {
+            "Title": "Nouvel_onglet",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "T"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Ouvre un nouvel onglet !"
+            }
+        },
+        "4": {
+            "Title": "Fermer_onglet",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "W"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Essaye de ne pas me fermer..."
+            }
+        },
+        "5": {
+            "Title": "Rétablir_le_dernier_onglet",
+            "Keys": {
+                "0": "Ctrl",
+                "1": "Shift",
+                "2": "T"
+            },
+            "Example": {
+                "Type": "p",
+                "Content": "Si tu me fermes, tu peux facilement me réouvrir !"
+            }
+        }
+    }
+}

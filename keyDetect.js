@@ -7,17 +7,17 @@ var keyboardMap = [
     "", // [5]
     "HELP", // [6]
     "", // [7]
-    "BACK_SPACE", // [8]
-    "TAB", // [9]
+    "Suppr", // [8]
+    "Tab", // [9]
     "", // [10]
     "", // [11]
     "CLEAR", // [12]
     "ENTER", // [13]
     "ENTER_SPECIAL", // [14]
     "", // [15]
-    "SHIFT", // [16]
-    "CONTROL", // [17]
-    "ALT", // [18]
+    "Shift", // [16]
+    "Ctrl", // [17]
+    "Alt", // [18]
     "PAUSE", // [19]
     "CAPS_LOCK", // [20]
     "KANA", // [21]
@@ -36,10 +36,10 @@ var keyboardMap = [
     "PAGE_DOWN", // [34]
     "END", // [35]
     "HOME", // [36]
-    "LEFT", // [37]
-    "UP", // [38]
-    "RIGHT", // [39]
-    "DOWN", // [40]
+    "Left", // [37]
+    "Up", // [38]
+    "Right", // [39]
+    "Down", // [40]
     "SELECT", // [41]
     "PRINT", // [42]
     "EXECUTE", // [43]
@@ -257,14 +257,17 @@ var keyboardMap = [
     "", // [255]
 ];
 
-$(".key").hover(
-    function () {
-        $(this).addClass("hoverClass");
-    },
-    function () {
-        $(this).removeClass("hoverClass");
-    }
-);
+// when the file is loaded, add the hover trigger on keys
+$(document).ready(function () {
+    $(".key").hover(
+        function () {
+            $(this).addClass("hoverClass");
+        },
+        function () {
+            $(this).removeClass("hoverClass");
+        }
+    );
+});
 
 function detectKey(e) {
     let key = e.keyCode ? e.keyCode : e.which;
@@ -278,4 +281,152 @@ $(document).keydown(function (e) {
 });
 $(document).keyup(function (e) {
     $("div[data-key='" + detectKey(e) + "']").removeClass("hoverClass");
+});
+
+// Function to display the keys container
+function displayKeysContainer(item) {
+    var keyscontainer = [];
+
+    keyscontainer.push(`<div class="keys-content">`);
+    keyscontainer.push(
+        `<h2 class="title">` + item.Title.replace(/_/g, " ") + `</h2>`
+    );
+    keyscontainer.push(displayKeys(item.Keys));
+    keyscontainer.push(`</div>`);
+
+    return keyscontainer.join("");
+}
+
+// Function to display the keys
+// And detect multiple keys (e.g. leftArrow/rightArrow) and display as a single (no +)
+function displayKeys(keys) {
+    var outputKeys = [];
+
+    console.log(keys[0]);
+
+    num = 0;
+
+    outputKeys.push(`<div class="keys">`);
+    function convertArrow(str) {
+        if (str === "Left") {
+            return "←";
+        } else if (str === "Right") {
+            return "→";
+        } else {
+            return str;
+        }
+    }
+    while (keys[num] ? true : false) {
+        // detect if there is a "/" to split the keys
+        if (keys[num].includes("/")) {
+            singleKey = keys[num].replace(/\s/g, "").split("/");
+            outputKeys.push(
+                `<div class="key" data-key="` +
+                    singleKey[0] +
+                    `">` +
+                    convertArrow(singleKey[0]) +
+                    `</div>`
+            );
+            outputKeys.push(
+                `<div class="key" data-key="` +
+                    singleKey[1] +
+                    `">` +
+                    convertArrow(singleKey[1]) +
+                    `</div>`
+            );
+        } else {
+            outputKeys.push(
+                `<div class="key" data-key="` +
+                    keys[num] +
+                    `">` +
+                    keys[num] +
+                    `</div>`
+            );
+        }
+
+        outputKeys.push(`<span>+</span>`);
+
+        num++;
+    }
+    // remove the last + at the end of the div
+    outputKeys.pop();
+    outputKeys.push(`</div>`);
+
+    return outputKeys.join("");
+}
+
+// Function to display the shortcuts' examples
+function displayExamples(example) {
+    var examples = [];
+
+    if (example.Type == "Input") {
+        examples.push(
+            `<div class="example">
+                <input value="` +
+                example.Content +
+                `" />
+            </div>`
+        );
+    } else {
+        examples.push(
+            `<div class="example">
+                <` +
+                example.Type +
+                `>` +
+                example.Content +
+                `</` +
+                example.Type +
+                `>
+            </div>`
+        );
+    }
+
+    return examples.join("");
+}
+
+// Function to display the shortcuts by handling the JSON
+// 2 places to display them : in the nav bar and in the body container
+$.getJSON("shortcuts.json", function (data) {
+    // Display the categories in the nav bar with the link
+    var nav = [];
+    $.each(data, function (key) {
+        nav.push('<a href="#' + key + '">' + key.replace(/_/g, " ") + "</a>");
+    });
+    $(".nav").html(nav.join(""));
+
+    // Display the shortcuts
+    var content = [];
+
+    // console.log(data);
+    // // console.log(data.length);
+    // console.log(data["Manipulation_du_texte"][6] ? true : false);
+
+    $.each(data, function (category, shortcuts) {
+        // console.log(data);
+        // console.log(data[category]);
+
+        content.push(`<div class="container" id="` + category + `">`);
+        content.push(`<h2>` + category.replace(/_/g, " ") + `</h2>`);
+
+        n = 0;
+        while (data[category][n] ? true : false) {
+            console.log(data[category][n]);
+            content.push("<div class='shortcut'>");
+            content.push(displayExamples(data[category][n].Example));
+            content.push(displayKeysContainer(data[category][n]));
+            content.push("</div>");
+            n++;
+        }
+
+        // for (var i = 0; i < category.length; i++) {
+        //     for (var j = 0; j < shortcuts.length; j++) {
+        //         content.push(displayKeysContainer(shortcuts[j]));
+        //         content.push(displayExamples(shortcuts[j].Example));
+        //     }
+        // }
+
+        content.push("</div>");
+    });
+
+    $("#shortcut_container").html(content.join(""));
 });
