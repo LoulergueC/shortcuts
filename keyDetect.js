@@ -278,6 +278,18 @@ $(document).keydown(function (e) {
     $("div[data-key='" + detectKey(e) + "']:not(.hoverClass)").addClass(
         "hoverClass"
     );
+
+    // detect if all keys are pressed and trigger confetti
+    $(".keys").each(function () {
+        if (
+            $(this).find(".hoverClass").length ===
+            $(this).find("span").length + 1
+        ) {
+            let ID = $(this).parent().attr("data-canvas-id");
+            launchConfetti(ID);
+            console.log(ID);
+        }
+    });
 });
 $(document).keyup(function (e) {
     $("div[data-key='" + detectKey(e) + "']").removeClass("hoverClass");
@@ -287,7 +299,12 @@ $(document).keyup(function (e) {
 function displayKeysContainer(item) {
     var keyscontainer = [];
 
-    keyscontainer.push(`<div class="keys-content">`);
+    keyscontainer.push(
+        `<canvas id="` + item.Title + `" width="300" height="300"></canvas>`
+    );
+    keyscontainer.push(
+        `<div class="keys-content" data-canvas-id="` + item.Title + `">`
+    );
     keyscontainer.push(
         `<h2 class="title">` + item.Title.replace(/_/g, " ") + `</h2>`
     );
@@ -301,8 +318,6 @@ function displayKeysContainer(item) {
 // And detect multiple keys (e.g. leftArrow/rightArrow) and display as a single (no +)
 function displayKeys(keys) {
     var outputKeys = [];
-
-    console.log(keys[0]);
 
     num = 0;
 
@@ -397,33 +412,18 @@ $.getJSON("shortcuts.json", function (data) {
     // Display the shortcuts
     var content = [];
 
-    // console.log(data);
-    // // console.log(data.length);
-    // console.log(data["Manipulation_du_texte"][6] ? true : false);
-
-    $.each(data, function (category, shortcuts) {
-        // console.log(data);
-        // console.log(data[category]);
-
+    $.each(data, function (category) {
         content.push(`<div class="container" id="` + category + `">`);
         content.push(`<h2>` + category.replace(/_/g, " ") + `</h2>`);
 
         n = 0;
         while (data[category][n] ? true : false) {
-            console.log(data[category][n]);
             content.push("<div class='shortcut'>");
             content.push(displayExamples(data[category][n].Example));
             content.push(displayKeysContainer(data[category][n]));
             content.push("</div>");
             n++;
         }
-
-        // for (var i = 0; i < category.length; i++) {
-        //     for (var j = 0; j < shortcuts.length; j++) {
-        //         content.push(displayKeysContainer(shortcuts[j]));
-        //         content.push(displayExamples(shortcuts[j].Example));
-        //     }
-        // }
 
         content.push("</div>");
     });

@@ -78,6 +78,7 @@ h1 {
 .shortcut {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .keys-content {
@@ -143,4 +144,12 @@ h1 {
 .shortcut:hover .example,
 .shortcut:focus-within .example {
     opacity: 1;
+}
+
+canvas {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
 }
