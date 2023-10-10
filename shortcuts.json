@@ -9,7 +9,8 @@
             "Example": {
                 "Type": "Textarea",
                 "Content": "Copie moi !"
-            }
+            },
+            "Tooltip": "Pour copier du texte ou un fichier"
         },
         "1": {
             "Title": "Couper",
@@ -20,7 +21,8 @@
             "Example": {
                 "Type": "Textarea",
                 "Content": "Coupe moi !"
-            }
+            },
+            "Tooltip": "Pour déplacer le texte ou le fichier en collant"
         },
         "2": {
             "Title": "Coller",
@@ -31,7 +33,8 @@
             "Example": {
                 "Type": "Input",
                 "Content": "Colle moi !"
-            }
+            },
+            "Tooltip": "Pour coller ce qui est déjà collé"
         },
         "3": {
             "Title": "Tout_sélectionner",
@@ -42,7 +45,8 @@
             "Example": {
                 "Type": "Textarea",
                 "Content": "Sélectionne tout à l'intérieur de moi !"
-            }
+            },
+            "Tooltip": "Pour tout sélectionner"
         },
         "4": {
             "Title": "Naviguer_entre_mots_entiers",
@@ -53,7 +57,8 @@
             "Example": {
                 "Type": "Textarea",
                 "Content": "Navigue entre les mots"
-            }
+            },
+            "Tooltip": "Pour placer le curseur au début du mot ou du prochain mot."
         },
         "5": {
             "Title": "Sélectionner_mots_entiers",
@@ -65,7 +70,8 @@
             "Example": {
                 "Type": "Textarea",
                 "Content": "Sélectionne chaque mot 1 par 1 !"
-            }
+            },
+            "Tooltip": "Pour sélectionner un mot entier."
         },
         "6": {
             "Title": "Supprimer_mots_entiers",
@@ -76,7 +82,8 @@
             "Example": {
                 "Type": "Textarea",
                 "Content": "Sélectionne chaque mot 1 par 1 !"
-            }
+            },
+            "Tooltip": "Pour supprimer un mot entier."
         }
     },
     "Raccourcis_génériques": {
@@ -89,7 +96,8 @@
             "Example": {
                 "Type": "Input",
                 "Content": "Supprime moi et annule l'action"
-            }
+            },
+            "Tooltip": "Pour annuler la dernière action."
         },
         "1": {
             "Title": "Rétablir",
@@ -100,7 +108,8 @@
             "Example": {
                 "Type": "Input",
                 "Content": "Ctrl + Z pui Ctrl + Y"
-            }
+            },
+            "Tooltip": "Pour rétablir la dernière action annulée."
         },
         "2": {
             "Title": "Imprimer",
@@ -111,7 +120,8 @@
             "Example": {
                 "Type": "Input",
                 "Content": "Imprime moi !"
-            }
+            },
+            "Tooltip": "Pour ouvrir rapidement le panneau d'impression."
         },
         "3": {
             "Title": "Rechercher",
@@ -122,7 +132,8 @@
             "Example": {
                 "Type": "Input",
                 "Content": "Recherche moi !"
-            }
+            },
+            "Tooltip": "Pour rechercher facilement ou mot ou phrase sur une page."
         }
     },
     "Spécifique_à_word": {
@@ -135,7 +146,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Essaye dans word !"
-            }
+            },
+            "Tooltip": "Pour rendre la sélection en gras."
         },
         "1": {
             "Title": "Texte_italique",
@@ -146,7 +158,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Essaye dans word !"
-            }
+            },
+            "Tooltip": "Pour rendre la sélection en italique."
         },
         "2": {
             "Title": "Texte_souligné",
@@ -157,7 +170,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Essaye dans word !"
-            }
+            },
+            "Tooltip": "Pour rendre la sélection en souligné."
         },
         "3": {
             "Title": "Copier_mise_en_forme",
@@ -169,7 +183,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Essaye dans word !"
-            }
+            },
+            "Tooltip": "Pour copier uniquement la mise en forme, sans le texte. (gras, police, couleur, etc...)"
         },
         "4": {
             "Title": "Coller_mise_en_forme",
@@ -181,7 +196,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Essaye dans word !"
-            }
+            },
+            "Tooltip": "Pour coller uniquement la mise en forme précedemment copiée."
         }
     },
     "Gestion_des_fenêtres": {
@@ -194,7 +210,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Ouvre une nouvelle fenêtre !"
-            }
+            },
+            "Tooltip": "Pour ouvrir une nouvelle fenêtre d'application."
         },
         "1": {
             "Title": "Fermer_fenêtre",
@@ -205,7 +222,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Attention aux doigts"
-            }
+            },
+            "Tooltip": "Pour fermer la fenêtre actuelle."
         },
         "2": {
             "Title": "Naviguer_entre_fenêtres",
@@ -216,7 +234,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Navigue entre les fenêtres"
-            }
+            },
+            "Tooltip": "Passer d’une fenêtre à l’autre. Maintenez la touche Alt enfoncée et appuyez une ou plusieurs fois sur la touche Tab pour accéder à la fenêtre de votre choix."
         },
         "3": {
             "Title": "Nouvel_onglet",
@@ -227,7 +246,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Ouvre un nouvel onglet !"
-            }
+            },
+            "Tooltip": "Pour ouvrir un nouvel onglet dans le navigateur."
         },
         "4": {
             "Title": "Fermer_onglet",
@@ -238,7 +258,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Essaye de ne pas me fermer..."
-            }
+            },
+            "Tooltip": "Pour fermer l'onglet actif dans le navigateur."
         },
         "5": {
             "Title": "Rétablir_le_dernier_onglet",
@@ -250,7 +271,8 @@
             "Example": {
                 "Type": "p",
                 "Content": "Si tu me fermes, tu peux facilement me réouvrir !"
-            }
+            },
+            "Tooltip": "Pour réouvrir le dernier onglet fermé. (fonctionne plusieurs fois à la suite)"
         }
     }
 }

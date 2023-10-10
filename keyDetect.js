@@ -287,7 +287,6 @@ $(document).keydown(function (e) {
         ) {
             let ID = $(this).parent().attr("data-canvas-id");
             launchConfetti(ID);
-            console.log(ID);
         }
     });
 });
@@ -418,7 +417,11 @@ $.getJSON("shortcuts.json", function (data) {
 
         n = 0;
         while (data[category][n] ? true : false) {
-            content.push("<div class='shortcut'>");
+            content.push(
+                `<div class="shortcut" data-tippy-content="` +
+                    data[category][n].Tooltip +
+                    `">`
+            );
             content.push(displayExamples(data[category][n].Example));
             content.push(displayKeysContainer(data[category][n]));
             content.push("</div>");
@@ -429,4 +432,7 @@ $.getJSON("shortcuts.json", function (data) {
     });
 
     $("#shortcut_container").html(content.join(""));
+
+    // Then activate Tippy to display the tooltips
+    tippy(".shortcut", {});
 });
