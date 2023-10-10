@@ -1,1 +1,18 @@
+# Shortcuts visual note
 
+This project have the goal to act like a public note to remember easy shortcuts and enhance productivity.
+
+
+## Demo
+
+This project is available [here](https://www.linkedin.com/)
+## Features
+
+- onKeyDown detect and visual callback
+- confettis on full shortcut completion
+- tooltips to describe the shortcut
+## Contributing
+
+You can add or do your own shortcuts list by modifying the `JSON` file.
+
+See `shortcuts.json` to see the structural layout to build your own.
